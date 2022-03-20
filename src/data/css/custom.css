@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
 body, html{
     padding: 0px;
     margin: 0px;
 
+}
+::-webkit-scrollbar{
+    visibility: hidden;
+}
+html{
+    overflow: hidden;
 }
 body{
     width: 100vw;
@@ -63,4 +73,57 @@ main:hover #wh-fill2{
         width: 70vw;
         height: 70vh;
     }    
+}
+.letter-1{
+    grid-area: 1/1;
+    justify-self: start;
+    margin-top:5vh;
+    margin-left:1vw;
+    position: relative;
+    left: -6vw;
+    transition: 0.4s linear;
+}
+.letter-2{
+    grid-area: 1/1;
+    justify-self: end;
+    margin-top:5vh;
+    margin-right:1vw;
+    position: relative;
+    right: -6vw;
+    transition: 0.4s linear;
+}
+main:hover .letter-1{
+    left: 1vw;
+}
+main:hover .letter-2{
+    right: 1vw;
+}
+.ct-page{
+    color: white;
+    z-index: 2;
+    grid-area: 1/1;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    visibility: hidden;
+}
+.web-title{
+    font-size: 5vw;
+    letter-spacing: 5px;
+    justify-self: center;
+}
+.description{
+    width: 40vw;
+    font-size: 2vw;
+    text-align: center;
+    justify-self: center;
+    align-self: start;
+}
+main:hover .ct-page{
+    animation: an-2 1s 1.5s linear forwards;
+}
+@keyframes an-2 {
+    to{
+        visibility: visible;
+    }
 }
